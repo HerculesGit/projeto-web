@@ -1,0 +1,200 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+/*Tirar as margens e padding que vem por padrao*/
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	min-height: 500px;
+	background-image: url("../image/header.jpg");
+	/*Isso faz com quê, mesmo que a dimensao nao seja maior que a imagem ela nao se repita */
+	background-repeat: no-repeat;
+
+	/* Temos auto, contain (espreme a imagem pra caber) e etc */
+	/*cobrir toda a área do header com essa imagem*/
+	background-size: cover;
+
+	/*posicao*/
+	background-position: bottom;
+
+	/* Separar o logo do menu */
+	display: flex; 
+
+	/* Servirá para o form. Porque esse header terá uma posicao relativa
+	e o form estará relativo ao header */
+	position: relative;
+
+}
+
+header .bg-gradient {
+	min-height: 300px;
+	width: 100%;
+
+	/* Gradiente linear*/
+	/*  linear-gradient(como quer ele, começacom porcento, como ternina)*/
+	/* Será um escuro que vai clariando */
+	background: linear-gradient(to bottom, rgba(0,0,0, 0.65) 0%, rgba(0,0,0,0) 100%)
+}
+
+
+.header-border {
+	display: flex;
+	border-bottom: rgba(255,255,255, 0.25) 1px solid;
+}
+
+header #logo{
+	width: 200px;
+	color: #FFF;
+	line-height: 60px;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	
+	/* sombra */
+	/* baixo, esquerda, tamanho da sombra */
+	text-shadow: #000 1px 1px 8px
+
+}
+
+.menu {
+	/* Se ajustar automaticamente */
+	flex: 1; /*Pega todo o restante e vai dividir em uma parte só*/
+}
+
+
+.menu ul {
+		/* colocar os li's em coluna */
+		display: flex;
+
+		/* Alinhar no final */
+		justify-content: flex-end;
+
+		/* tirar marcacoes da lista */
+		list-style: none;
+		padding: 0%;
+}
+
+.menu li {
+	min-width: 100px;
+
+	/* altura da linha */
+	line-height: 28px;
+
+}
+
+.menu a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 20px;
+}
+
+#register {
+	background-color: #FFF;
+
+	/* largura e altura desse componente */
+	width: 100%;
+	height: 400px;
+	max-width: 350px;
+
+	/* agora com o position: relative no header, podemos usar esse filho dele
+	e dizer: "você respeite seu pai, fique dentro dele, e irá ficar posicionado em algum lugar dele"
+	*/
+	position: absolute;
+
+	/* posicionar embaixo */
+	bottom: 0px;
+
+	/* vá para o lado direito */
+	right: 10vw; /*10 vw quer dizer 10 viewport. Ele pega 10% da área visível do site/navegador*/
+
+	/* sombra */
+	box-shadow: 0 0 2.1875rem rgba(140, 152, 164, 0.125);
+	
+	/* deixar um cantinho aredondado no top-left*/
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+
+	/* para nao ficar tao grudado */
+	padding: 20px;
+	color: #333;
+
+} 
+
+#register p{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 35px;
+}
+
+#register .field{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+#register input {
+	width: 100%;
+	padding: 0.75 1rem;
+	border-radius: 4px;
+	border: #CCC 1px solid;
+}
+
+/* Pelo tipo */
+#register input[type=radio] {
+	width: 25px;
+}
+
+#register button {
+	width: 100%;
+	border: none;
+	background-color: #E67E22;
+	color: #FFF;
+	padding: 0.75rem;
+	font-size: 1.2em;
+
+}
+
+
+.container {
+	max-width: 960px;
+	margin: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.title h1 {
+	font-size: 3em;
+	border-bottom: #CCC 1px solid;
+	padding-bottom: 1rem;
+}
+
+.home p {
+	text-align: justify;
+}
+
+
+footer {
+	background-color: #f5f5f5;
+	color: #6c757d;
+	font-size: .8em;
+
+}
+
+footer p {
+	line-height: 35px;
+}
+
+footer .container {
+	display: flex;
+}
+
+
+footer .menu a{
+	color: #6c757d;
+}
