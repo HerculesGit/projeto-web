@@ -204,6 +204,15 @@ footer .menu a{
 	display: none;
 }
 
+/* o backdrop tá inciando com z-index: 2, ou seja, tá acima de todo mundo
+	impedindo do button ser clicado. Então vamos escondelo
+*/
+.backdrop {
+	display: none;	
+}
+
+
+
 /* todo código responsivo, os estilos que queremos que acontelça em certos tamanho de tela
 precisa tá dentro de uma midia query  */
 /* Como se fosse um if validando o tamanho da tela 
@@ -228,6 +237,9 @@ no caso aí seria:
 
 	.menu.open .backdrop {
 		opacity: .5;
+		
+		/* quando ele abrir, aí sim podemos mostrar o esse backdrop */
+		display: block;
 	}
 
 	/* sem contorno */
