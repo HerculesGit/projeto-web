@@ -3,10 +3,33 @@
 <head>
 
 	<meta charset="utf-8">
+
+	<!-- 
+		Explicação do meta com viewport
+		Estamos dizendo que se a tela é de 320px, a largura do viewport é 320px
+		Se a tela for maior o viewport será do tamanho dela
+
+		O width(largura) não é a *resolução física* (ex: De um celular) até porque
+		tem aparelhos que são pequenos mas a resolução é de 2048px por exemplo.
+		Mas é a medida CSS que estamos iniciando.
+
+		O initial-scale é a escala inicial, se colocarmos 2.0, por exemplo, irá dobrar o tamanho.
+
+		Podemos colocar que o usuário não pode dar zoom, colocando max-scale, contudo, não faça isso.
+
+		Essa linha é importante para ter o responsivo no CSS.
+	 -->
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="id=edge">
 
 	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- link para o  Font Awesome, para usar em dispositivos pequenos 
+		Após baixados podemos usar os icones desse site disponíveis gratuitamente na aba icons
+	-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 	<title>Home Page</title>
 
 
@@ -47,9 +70,25 @@
 					Business
 				</div>
 
-				<nav class="menu">
+				<nav class="menu open">
+
+					<!-- Essa tag I foi a que pegamos do site para dispositivos com tela pequena -->
+					<!-- fas fa-bars são duas classes porque tem espaço entre esses dois nomes -->
+					<button type="button" class="open-menu"><i class="fas fa-bars"></i></button>
+
+					<!-- Para criar o efeito de quando aparecer as opções na lateral
+						ficar escuro o fundo
+					-->
+					<div class="backdrop"></div>
 					<!-- Lista nao ordenada -->
 					<ul>
+						<!-- colocando botao -->
+						<li class="close-menu">
+							
+							<button type="button"><i class="fas fa-times"></i></button>
+						
+						</li>
+						
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">Contact</a></li>
