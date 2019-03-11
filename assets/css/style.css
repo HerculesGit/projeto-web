@@ -211,6 +211,10 @@ footer .menu a{
 	display: none;	
 }
 
+/* NAo aparecer quando a tela for grande */
+.close-menu {
+	display: none;
+}
 
 
 /* todo código responsivo, os estilos que queremos que acontelça em certos tamanho de tela
